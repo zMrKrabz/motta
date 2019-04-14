@@ -8,13 +8,14 @@ import { FontAwesome } from '@expo/vector-icons';
 import Camera from '../components/Camera';
 import SettingScreen from '../screens/SettingsScreen';
 import HomeScreen from '../screens/HomeScreen';
+import LoadingScreen from '../screens/LoadingScreen';
 
 const BottomTabNavigator = createBottomTabNavigator({
 	Home: {
 		screen: HomeScreen,
 	},
 	Camera: {
-		screen: Camera,
+		screen: uploadNavigator,
 	},
 	Settings: {
 		screen: SettingScreen,
@@ -31,6 +32,9 @@ const uploadNavigator = createStackNavigator(
 	{
 		Camera: {
 			screen: Camera
+		},
+		LoadingScreen: {
+			screen: LoadingScreen
 		}
 	}
 )
