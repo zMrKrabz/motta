@@ -38,7 +38,6 @@ export default class CameraScreen extends React.Component {
 			);
 		}
 	}
-	
 }
 
 const styles = StyleSheet.create({
@@ -47,6 +46,5 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff',
 		alignItems: 'center',
 		justifyContent: 'center',
-		paddingTop: 625,
 	},
 });

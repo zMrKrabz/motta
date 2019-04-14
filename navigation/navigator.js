@@ -9,6 +9,7 @@ import CameraScreen from '../components/Camera';
 import SettingScreen from '../screens/SettingsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LoadingScreen from '../screens/LoadingScreen';
+import DetailsScreen from '../screens/DetailsScreen';
 
 const BottomTabNavigator = createBottomTabNavigator({
 	Home: {
@@ -35,6 +36,9 @@ const uploadNavigator = createStackNavigator(
 		},
 		LoadingScreen: {
 			screen: LoadingScreen
+		},
+		DetailsScreen:{
+			screen: DetailsScreen
 		}
 	}
 )

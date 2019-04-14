@@ -18,7 +18,7 @@ export default class Dripdown extends Component {
 			<Dropdown
 			label='Time Period'
 			data={data}
-			onChangeText={this.state.timePeriod=value}
+			//onChangeText={this.state.timePeriod=value}
 			/>
 		);
 	}
