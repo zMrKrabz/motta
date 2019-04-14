@@ -6,7 +6,7 @@ import {
 	FlatList,
 	StyleSheet,
 } from 'react-native';
-import parseErrorStack from 'react-native/Libraries/Core/Devtools/parseErrorStack';
+import Dripdown from '../components/Dripdown';
 
 export default class HomeScreen extends Component {
 	/*
@@ -41,6 +41,7 @@ export default class HomeScreen extends Component {
 			// get all the items within the last _ days
 			// depending on the state, it will be 1/7/30/365
 			const value = await AsyncStrorage.getItem('history');
+			let timePeriod = this.props.timePeriod;
 			let history = value.find();
 			let historyTotal = history.forEach(oneReceipt => {
 				oneReceipt.items.forEach(one => {
@@ -91,7 +92,7 @@ export default class HomeScreen extends Component {
 					<Text >{this.state.currentlyDisplay} Amount</Text>
 					<Text >{this.state.display}</Text>
 				</View>
-				<Text>dropdown for monthly/weekly/daily</Text>
+				<Dripdown />
 				<FlatList
 					style={styles.list}
 					data={this.state.receipts}
