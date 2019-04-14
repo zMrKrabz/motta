@@ -8,6 +8,7 @@ import {
 	TouchableOpacity,
 	Button,
 	StyleSheet } from 'react-native';
+	
 import CaptureButton from './CaptureButton'
 
 export default class CameraScreen extends React.Component {
