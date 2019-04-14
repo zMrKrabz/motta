@@ -5,7 +5,7 @@ import {
 } from 'react-navigation';
 import React, { Component } from 'react';
 import { FontAwesome } from '@expo/vector-icons';
-import Camera from '../components/Camera';
+import CameraScreen from '../components/Camera';
 import SettingScreen from '../screens/SettingsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LoadingScreen from '../screens/LoadingScreen';
@@ -15,7 +15,7 @@ const BottomTabNavigator = createBottomTabNavigator({
 		screen: HomeScreen,
 	},
 	Camera: {
-		screen: uploadNavigator,
+		screen: CameraScreen,
 	},
 	Settings: {
 		screen: SettingScreen,
@@ -31,7 +31,7 @@ const BottomTabNavigator = createBottomTabNavigator({
 const uploadNavigator = createStackNavigator(
 	{
 		Camera: {
-			screen: Camera
+			screen: CameraScreen
 		},
 		LoadingScreen: {
 			screen: LoadingScreen
