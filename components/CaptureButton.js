@@ -8,13 +8,17 @@ import {
 import { Camera, Permissions } from 'expo';
 
 export default class CaptureButton extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			loading: false,
+		}
+	}
+
 	snap = async() => {
 		try{
 			let photo = await this.camera.takePictureAsync();
-			this.setState({
-				receiptPicture: photo.url
-			});
-			// this.props.navigation.navigate('LoadingScreen');
+			this.props.navigation.navigate('LoadingScreen', {picture: picture});
 		}
 		catch (error) {
 			console.log(error);
@@ -42,7 +46,7 @@ const styles = StyleSheet.create({
 	captureButton: {
 		width: 160,
 		borderRadius: 10,
-		backgroundColor: "white",
+		backgroundColor: "black",
 		alignItems: 'center',
 		position: 'absolute',
 		bottom: 0,
