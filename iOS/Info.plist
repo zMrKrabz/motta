@@ -1,0 +1,6 @@
+<key>NSCameraAddUsageDescription</key>
+<string>This app requires the camera to take an image to be identified</string>
+
+<!-- Include this only if you are planning to use the camera roll -->
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>Your message to user when the photo library is accessed for the first time</string>
